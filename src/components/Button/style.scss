@@ -1,0 +1,31 @@
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    padding: 1.2vw 3.2vh;
+
+    border-radius: 8px;
+    border: none;
+    
+    width: 10vw;
+    height: 5.6vh;
+
+    label {
+        font-size: 2vh;
+        font-weight: 600;
+    }
+  
+}
+
+.button-border-red {
+    border: 2px solid var(--color-bordor);
+    background: transparent;   
+    color: var(--color-bordor); 
+}
+
+.button-filled-green{
+    background-color: var(--color-green-300);
+    color: var(--color-white);
+}
+

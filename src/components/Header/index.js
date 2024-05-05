@@ -12,20 +12,20 @@ const Header = ({  }) => {
         <div className="header">
             <img src={Logo} alt="Logo" />
             <div className="header-buttons">
-            <Button 
-            variant="button-filled-green"
-            name="Teste grátis"
-            onClick={() => {
-                navigate("/#");
-                //fazer pop up de cadastro parcial de email
-            }}
-            />
-            <Button 
-            variant="button-border-red"
-            name="Login"
-            icon={Crown}
-            onClick={() => {navigate("/login")}}
-            />
+                <Button 
+                variant="button-filled-green"
+                name="Teste grátis"
+                onClick={() => {
+                    navigate("/#");
+                    //fazer pop up de cadastro parcial de email
+                }}
+                />
+                <Button 
+                variant="button-border-red"
+                name="Login"
+                icon={Crown}
+                onClick={() => {navigate("/login")}}
+                />
             </div>
         </div>
     );

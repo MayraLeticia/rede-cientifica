@@ -1,0 +1,34 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: fixed;
+
+    width: 100%;
+    height: 8.6vh;
+
+    padding: 0 2.5vh;
+    
+    background-color: var(--color-white);
+    box-shadow: 1px 0px 5px 0px rgba(0,0,0,0.75);
+
+    img {
+        height: 8vh;
+        width: auto;
+    }
+
+    .header-buttons{
+        width: 23vw;
+
+        display: flex;
+        justify-content: space-between;
+
+        img {
+            width: 1.5vw;
+            height: auto;
+
+        } 
+    }
+
+}
