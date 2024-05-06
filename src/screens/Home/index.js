@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.scss";
-import { HomeMessages } from "../../constants/home.js";
+import { HomeMessages, FaqMessages } from "../../constants/home.js";
 import { Button, Layout } from "../../components";
 import HomeImage from "../../assets/images/Home-image.svg";
 import { useNavigate } from "react-router-dom";
@@ -34,10 +34,17 @@ const Home = () => {
 
             <div className="home-footer">
                 <div className="faq">
-                
+                    <label>Faq</label>
+                    <div className="faq-container">
+                        <ul>
+                            {FaqMessages?.map((item) => (
+                            <li className="card">{item?.question}</li>
+                            ))}
+                        </ul>
+                    </div>
                 </div>
                 <div className="contact">
-                
+                        
                 </div>
             
             </div>

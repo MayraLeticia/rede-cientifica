@@ -55,3 +55,34 @@
     }
 
 }
+
+.home-footer {
+    width: 100vw;
+    height: 26vh;
+
+    padding: 0 3.5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+
+    background-color: var(--color-green-400);
+    color: var(--color-white);
+
+
+    .faq {
+        padding: 2.4vh 0;
+
+        label {
+            font-size: 1.5vw;
+            font-weight: 500;
+            margin-bottom: 0.8vh;
+        }
+    
+        .faq-container {
+            font-size: 1vw;
+
+        }
+
+    }
+}
