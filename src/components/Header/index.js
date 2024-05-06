@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "../../components";
 
 
-const Header = ({  }) => {
+const Header = () => {
     const navigate = useNavigate();
 
     return (

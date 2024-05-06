@@ -2,14 +2,11 @@ import "./style.scss";
 import { Header } from "../../components";
 
 
-const Layout = ({ childrem }) => {
+const Layout = ({ children }) => {
     return (
         <div className="layout">
             <Header />
-            <div>
-            {childrem}
-            </div>
- 
+            <div> {children} </div>
         </div>
     );
 }

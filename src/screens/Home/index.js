@@ -1,25 +1,48 @@
 import React from "react";
 import "./style.scss";
-import { Layout } from "../../components";
 import { HomeMessages } from "../../constants/home.js";
+import { Button, Layout } from "../../components";
+import HomeImage from "../../assets/images/Home-image.svg";
+import { useNavigate } from "react-router-dom";
 
-function Home() {
+
+const Home = () => {
+    const navigate = useNavigate();
+
     return (
         <Layout>
-            <div className="container">
-                <div className="left-side">
-                    <div className="home-title">
+            <div className='home-container'>
+                <div className="left-size">
+                    <div className='home-text'>
                         <label>{HomeMessages.title}</label>
                         <p>{HomeMessages.description}</p>
                     </div>
-                    
+                    <div className="textfield">
+                        <h1>input/button</h1>
+                    </div>
+                    <Button 
+                    variant="gmail-button"
+                    name="Entrar com Google"
+                    onClick={() => {
+                        navigate("/#");
+                        //fazer pop up de cadastro gmail
+                    }}
+                    />
                 </div>
-
+                <img src={HomeImage} alt='illustration' />
             </div>
 
+            <div className="home-footer">
+                <div className="faq">
+                
+                </div>
+                <div className="contact">
+                
+                </div>
+            
+            </div>
         </Layout>
     );
-}
-
+};
 
 export default Home;
