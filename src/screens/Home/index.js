@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.scss";
 import { HomeMessages, FaqMessages } from "../../constants/home.js";
-import { Button, Layout } from "../../components";
+import { Button, InputPassword, Layout, Textfield } from "../../components";
 import HomeImage from "../../assets/images/Home-image.svg";
 import { useNavigate } from "react-router-dom";
 
@@ -17,9 +17,26 @@ const Home = () => {
                         <label>{HomeMessages.title}</label>
                         <p>{HomeMessages.description}</p>
                     </div>
-                    <div className="textfield">
-                        <h1>input/button</h1>
-                    </div>
+                        <InputPassword />
+                        {/* <Textfield 
+                            icon = "fa-envelope fa-regular"
+                            type="text"
+                            placeholder="Digite seu e-mail..."
+                        > 
+                                           
+                            <Button 
+                            variant="button-filled-green"
+                            name="Teste grátis"
+                            onClick={() => {
+                                navigate("/#");
+                                //fazer pop up de cadastro gmail
+                            }}
+                            />
+
+                            
+                        
+                        </Textfield> */}
+                   
                     <Button 
                     variant="gmail-button"
                     name="Entrar com Google"

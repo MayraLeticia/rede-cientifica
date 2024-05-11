@@ -1,18 +1,17 @@
 import "./style.scss";
 
 
-const Input = ({  variant, icon, placeholder, onChange, value, type }) => {
+const Input = ({ icon, type, variant, placeholder, value, onChange }) => {
     return (
-        <div>
+        <div className={`input-container`}>
+            <i className={`fa ${icon} icon`}></i>
             <input
-            className={`input ${variant}`} //se for password aplica o efeito da password
-            placeholder={placeholder}
-            type={type}
-            value={value}
-            onChange={onChange}
+                type={type}
+                className={`input ${variant}`} 
+                placeholder={placeholder}
+                value={value}
+                onChange={onChange} 
             />
-            {icon && <img src={icon} alt="icon" />}
-
         </div>
     );
 }

@@ -1,0 +1,44 @@
+.ContainerInputPassword .password-container {
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+border: 1px solid #ccc;
+border: none;
+margin: 10px 0;
+}
+
+.ContainerInputPassword .password-input {
+margin: 0;
+background-color: #9df3c4;
+border: none;
+font-family: "Inter", sans-serif;
+color: cadetblue;
+}
+
+.ContainerInputPassword {
+justify-content: space-around;
+cursor: pointer;
+background-color: #9df3c4;
+width: 270px;
+border-radius: 30px;
+display: flex;
+align-items: center;
+flex-direction: row;
+margin: 20px;
+padding: 10px 20px;
+}
+
+.ContainerInputPassword .icon {
+color: #1fab89; /* Gray color for the icons */
+}
+
+/* Especific styles for the icons */
+.ContainerInputPassword .fa-lock {
+margin-right: 10px;
+}
+
+.fa-eye,
+.fa-eye-slash {
+margin-left: 10px;
+}
