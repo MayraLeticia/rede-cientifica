@@ -15,7 +15,7 @@ const Textfield = ({ icon, type, input, placeholder, value, onChange, children, 
                 icon = {icon}
             />
             <div className={`layout ${variant}`}>{children}</div>
-            {/* variant pode ser two-btn, btn-below, btn-side */}
+            {/* variant pode ser two-btn, btn-below, btn-side-left, btn-side-right */}
         </div>
     );
 }

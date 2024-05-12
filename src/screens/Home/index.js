@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.scss";
-import { HomeMessages, FaqMessages } from "../../constants/home.js";
+import { HomeMessages, FaqMessages, ContactDB } from "../../constants/home.js";
 import { Button, InputPassword, Layout, Textfield } from "../../components";
 import HomeImage from "../../assets/images/Home-image.svg";
 import { useNavigate } from "react-router-dom";
@@ -17,11 +17,12 @@ const Home = () => {
                         <label>{HomeMessages.title}</label>
                         <p>{HomeMessages.description}</p>
                     </div>
-                        <InputPassword />
-                        {/* <Textfield 
+                        {/* <InputPassword /> */}
+                        <Textfield 
                             icon = "fa-envelope fa-regular"
                             type="text"
                             placeholder="Digite seu e-mail..."
+                            variant = "btn-side-right"
                         > 
                                            
                             <Button 
@@ -35,7 +36,7 @@ const Home = () => {
 
                             
                         
-                        </Textfield> */}
+                        </Textfield>
                    
                     <Button 
                     variant="gmail-button"
@@ -61,7 +62,14 @@ const Home = () => {
                     </div>
                 </div>
                 <div className="contact">
-                        
+                        <label>contact</label>
+                    <div className="contact-container">
+                        <ul>
+                            {ContactDB?.map((item) => (
+                            <li className="card">{item?.icon}{item?.content}</li>
+                            ))}
+                        </ul>
+                    </div>
                 </div>
             
             </div>

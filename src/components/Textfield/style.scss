@@ -1,14 +1,37 @@
+@use "sass:math";
+
 .textfield {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: row;
+    
+    margin: 2vh 0;
+
+   
 
     .layout {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: row;
-    
+
+        &.btn-side-right {
+            margin-left: 0.7vw;
+            height: 4.5vh; // Aplicando a altura somente para esta variante
+        }
+        &.btn-side-left {
+            margin-right: 0.7vw;
+            height: 4.5vh;// Aplicando a altura somente para esta variante
+        }
+        &.btn-below {
+            flex-direction: column;
+        }
+        &.two-btn {
+            // Estilos específicos para a variante two-btn
+        }
     }
+
+    
 }
+

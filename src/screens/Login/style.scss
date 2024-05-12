@@ -1,0 +1,63 @@
+.login-container {
+
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    img {
+        height: auto;
+        width: 35vw;
+
+        margin-right: 7.8vw;
+        margin-top: 4.8vh;
+    }
+
+    .left-size{
+        margin-left : 4.6vw;    
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .login-text {
+            display: flex;
+            align-items:flex-start;
+            justify-content: center;
+            flex-direction: column;
+    
+            margin-bottom: 1.2vh;
+    
+            label {
+                font-size: 2.5vw;
+                color: var(--color-bordor);
+                margin-bottom: 0.6vh;
+    
+                font-weight: 600;
+                        
+            }
+    
+            p {
+                font-size: 1.6vw;
+                font-weight: 500;
+                color: var(--color-green-300);              
+            }
+        }
+
+        input {
+            width: 28vw;
+        }
+
+        .gmail-button {
+            color: var(--color-white);
+            background-color: var(--color-google);
+
+            width: 20vw;
+        }
+
+    }
+
+}

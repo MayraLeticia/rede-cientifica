@@ -1,3 +1,6 @@
+import Instagram from "../assets/icons/Instagram.svg";
+import Whatsapp from "../assets/icons/Whatsapp.svg";
+
 export const HomeMessages = {
   title: (
     <div>
@@ -28,3 +31,23 @@ export const FaqMessages = [
   },
   
 ];
+
+export const ContactDB = [
+  {
+    icon: (
+      <img src= { Instagram } alt="Instagram"/>
+    ),
+    content:
+      "@redecom.ciencia"
+  },
+  {
+    icon: (
+      <img src= { Whatsapp } alt="Whatsapp"/>
+    ),
+    content:
+      "(85) 99216-3000"
+  },
+
+
+
+]

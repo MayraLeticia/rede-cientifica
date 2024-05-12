@@ -45,6 +45,10 @@
             }
         }
 
+        input {
+            width: 27.3vw;
+        }
+
         .gmail-button {
             color: var(--color-white);
             background-color: var(--color-google);
@@ -81,6 +85,46 @@
     
         .faq-container {
             font-size: 1vw;
+
+        }
+
+    }
+
+    .contact {
+        padding: 2.4vh 0;
+
+        &::before {
+            content: " ";
+            height: 10vh;
+            width: 0.078vw;
+            background-color: var(--color-white);
+        }
+
+        label {
+            font-size: 1.5vw;
+            font-weight: 500;
+            margin-bottom: 0.8vh;
+        }
+    
+        .contact-container {
+            font-size: 1vw;
+
+            li {
+
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+            }
+
+            img {
+                height: 3vh;
+                width: auto;
+
+                margin-right: 0.8vh;
+                margin-bottom: 0.8vh;
+
+            }
+    
 
         }
 
