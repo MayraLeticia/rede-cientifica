@@ -11,7 +11,7 @@
         height: auto;
         width: 35vw;
 
-        margin-right: 7.8vw;
+        margin: 0 7.8vw;
         margin-top: 4.8vh;
     }
 
@@ -29,7 +29,7 @@
             justify-content: center;
             flex-direction: column;
     
-            margin-bottom: 1.2vh;
+            margin-bottom: 2vh;
     
             label {
                 font-size: 2.5vw;
@@ -47,15 +47,15 @@
             }
         }
 
-        input {
-            width: 28vw;
+        .input-container {
+            width: 32.3vw;
+            margin-bottom: 2vh;
         }
 
-        .gmail-button {
-            color: var(--color-white);
-            background-color: var(--color-google);
+        .login-button {
+            width: 32.3vw;
 
-            width: 20vw;
+            font-size: 1.6vw !important; 
         }
 
     }

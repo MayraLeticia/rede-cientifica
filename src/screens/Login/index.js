@@ -22,11 +22,14 @@ const Login = () => {
                             type="text"
                             placeholder="E-mail"
                         /> 
-                        <InputPassword />
+                        <InputPassword 
+                            icon = "fa-solid fa-unlock-keyhole"
+                            placeholder="Senha"        
+                        />
                    
                     <Button 
-                    variant="gmail-button"
-                    name="Entrar com Google"
+                    variant="login-button button-filled-red"
+                    name="Entrar"
                     onClick={() => {
                         navigate("/#");
                         //fazer pop up de cadastro gmail

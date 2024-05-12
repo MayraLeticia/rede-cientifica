@@ -1,44 +1,47 @@
-.ContainerInputPassword .password-container {
-display: flex;
-align-items: center;
-justify-content: space-between;
+.input-container  {
 
-border: 1px solid #ccc;
-border: none;
-margin: 10px 0;
+    width: 100%;
+    height: 6vh;
+    padding: 1.2vh 1.5vw;
+
+    border-radius: 8px;
+    box-shadow: inset 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &:hover{
+        background-color: var(--color-grey);
+    }
+
+    i {
+        color: var(--color-placehoder);
+        margin: 1vh 0;
+    }
+ 
+    .password-input {
+        border: none;
+        margin-left: 0.4vw;
+        max-width: 100%;
+
+        background-color: transparent;
+        color: var(--color-black);
+
+        &:focus{
+            outline: none;
+        }
+
+        &::placeholder {
+            color: var(--color-placehoder);
+        }
+    }
+
+
+
 }
 
-.ContainerInputPassword .password-input {
-margin: 0;
-background-color: #9df3c4;
-border: none;
-font-family: "Inter", sans-serif;
-color: cadetblue;
-}
 
-.ContainerInputPassword {
-justify-content: space-around;
-cursor: pointer;
-background-color: #9df3c4;
-width: 270px;
-border-radius: 30px;
-display: flex;
-align-items: center;
-flex-direction: row;
-margin: 20px;
-padding: 10px 20px;
-}
 
-.ContainerInputPassword .icon {
-color: #1fab89; /* Gray color for the icons */
-}
 
-/* Especific styles for the icons */
-.ContainerInputPassword .fa-lock {
-margin-right: 10px;
-}
 
-.fa-eye,
-.fa-eye-slash {
-margin-left: 10px;
-}

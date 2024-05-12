@@ -9,15 +9,17 @@ const InputPassword = ({ variant, icon, placeholder, onChange, value }) => {
     };
 
     return (
-        <div className={`ContainerInputPassword ${variant}`}>
-            <i className={`fa ${icon} icon`}></i>
-            <input
-                type={showPassword ? 'text' : 'password'}
-                className={`password-input ${variant}`} // Aplica a classe condicionalmente
-                placeholder={placeholder}
-                value={value}
-                onChange={onChange}
-            />
+        <div className={`input-container`}>
+            <div className={`placehoder-box`}>
+                <i className={`fa ${icon} icon`}></i>
+                <input
+                    type={showPassword ? 'text' : 'password'}
+                    className={`password-input ${variant}`}
+                    placeholder={placeholder}
+                    value={value}
+                    onChange={onChange}
+                />
+            </div>
             <i
                 onClick={togglePasswordVisibility}
                 className={`fa ${showPassword ? 'fa-eye-slash' : 'fa-eye'} icon`}
