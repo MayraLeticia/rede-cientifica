@@ -3,6 +3,8 @@ import "./style.scss";
 import { LoginMessages, FaqMessages, ContactDB } from "../../constants/login.js";
 import { Button, InputPassword, Layout, Input } from "../../components";
 import LoginImage from "../../assets/images/Login-image.svg";
+import Google from "../../assets/icons/Google.svg";
+import Meta from "../../assets/icons/Meta.svg";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
@@ -32,9 +34,23 @@ const Login = () => {
                     name="Entrar"
                     onClick={() => {
                         navigate("/#");
-                        //fazer pop up de cadastro gmail
                     }}
                     />
+                    <div className='divider'>ou</div>
+                    <div className="alternative-login">
+                        <Button 
+                            variant="button-border-red"
+                            name="Google"
+                            icon={Google}
+                            onClick={() => {navigate("/#")}}
+                        />
+                        <Button 
+                            variant="button-border-red"
+                            name="Meta"
+                            icon={Meta}
+                            onClick={() => {navigate("/#")}}
+                        />
+                    </div>
                 </div>
                 <img src={LoginImage} alt='illustration' />
             </div>

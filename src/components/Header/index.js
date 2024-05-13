@@ -10,7 +10,7 @@ const Header = () => {
 
     return (
         <div className="header">
-            <img src={Logo} alt="Logo" />
+            <img src={Logo} alt="Logo" onClick={() => {navigate("/home")}}/>
             <div className="header-buttons">
                 <Button 
                 variant="button-filled-green"

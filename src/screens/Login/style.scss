@@ -7,7 +7,7 @@
     justify-content: center;
 
 
-    img {
+    > img {
         height: auto;
         width: 35vw;
 
@@ -32,7 +32,7 @@
             margin-bottom: 2vh;
     
             label {
-                font-size: 2.5vw;
+                font-size: 2.3vw;
                 color: var(--color-bordor);
                 margin-bottom: 0.6vh;
     
@@ -41,22 +41,57 @@
             }
     
             p {
-                font-size: 1.6vw;
+                font-size: 1.4vw;
                 font-weight: 500;
                 color: var(--color-green-300);              
             }
         }
 
         .input-container {
-            width: 32.3vw;
+            width: 29vw;
             margin-bottom: 2vh;
         }
 
         .login-button {
-            width: 32.3vw;
+            width: 29vw;
 
             font-size: 1.6vw !important; 
+            margin-bottom: 2vh;
+
         }
+
+        .divider {
+            font-size: 1vw;
+            display: flex;
+            align-items: center;
+            color: var(--color-placehoder);
+
+            &::before, &::after {
+                flex: 1;
+                content: '';
+                padding: 0.1vh 6.7vw;
+                background-color: var(--color-grey);
+                margin: 0.3vw;
+            }
+        }
+
+        .alternative-login{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            .button {
+                display: flex;
+                flex-direction: row-reverse;
+
+                margin: 0.8vh 2.3vw;
+            }
+    
+    
+        }
+        
 
     }
 
