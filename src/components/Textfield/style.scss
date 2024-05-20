@@ -25,7 +25,9 @@
             height: 4.5vh;// Aplicando a altura somente para esta variante
         }
         &.btn-below {
-            flex-direction: column;
+            justify-content: flex-end;
+            margin-top: 6vh;
+            height: 7vh;
         }
         &.two-btn {
             // Estilos específicos para a variante two-btn
