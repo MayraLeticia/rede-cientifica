@@ -10,7 +10,9 @@
 
     .freeflow-container{
         width: 56.5vw;
-        height: 41vh;
+        height: auto;
+
+        padding: 2.3vw 3.6vh;
 
         display: flex;
         justify-content: center;
@@ -30,31 +32,11 @@
             font-weight: 500;
         }
 
-        .textfield{
-            flex-direction: column;
 
-            p {
-                position: sticky;
-                left: 10vh;
-                width: 45vw;
-                height: auto;
-                padding: 4.8vh 3.5vw;
-
-                background-color: var(--color-green-300);
-
-
-            }
-
-            input {
-                width: 49vw;
-            }
-    
+        input {
+            width: 49vw;
         }
 
-
-        
-    
-    
 
     }
 }

@@ -71,10 +71,9 @@ const FreeFlow = () => {
                         type="text"
                         placeholder={currentStep.placeholder}
                         onChange={() => {}}
-                        icon={currentStep.icon ? <img src={currentStep.icon} alt="Lamp" /> : null}
+                        description={currentStep.description}
                         variant="btn-below"
                     >
-                        {currentStep.description && <p>{currentStep.description}</p>}
                         <Button 
                             variant="button-filled-red"
                             name="Proximo"

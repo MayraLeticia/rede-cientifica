@@ -17,26 +17,24 @@ const Home = () => {
                         <label>{HomeMessages.title}</label>
                         <p>{HomeMessages.description}</p>
                     </div>
-                        {/* <InputPassword /> */}
-                        <Textfield 
-                            icon = "fa-envelope fa-regular"
-                            type="text"
-                            placeholder="Digite seu e-mail..."
-                            variant = "btn-side-right"
-                        > 
-                                           
-                            <Button 
-                            variant="button-filled-green"
-                            name="Teste grátis"
-                            onClick={() => {
-                                navigate("/#");
-                                //fazer pop up de cadastro gmail
-                            }}
-                            />
 
-                            
-                        
-                        </Textfield>
+                    <Textfield 
+                        icon = "fa-envelope fa-regular"
+                        type="text"
+                        placeholder="Digite seu e-mail..."
+                        variant = "btn-side-right"
+                    > 
+                                        
+                        <Button 
+                        variant="button-filled-green"
+                        name="Teste grátis"
+                        onClick={() => {
+                            navigate("/#");
+                            //fazer pop up de cadastro gmail
+                        }}
+                        />
+
+                    </Textfield>
                    
                     <Button 
                     variant="gmail-button"

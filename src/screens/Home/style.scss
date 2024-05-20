@@ -45,8 +45,14 @@
             }
         }
 
-        input {
-            width: 27.3vw;
+        .textfield {
+            display: flex;
+            flex-direction: row !important;
+
+            input {
+                width: 27.3vw;
+            }
+
         }
 
         .gmail-button {
