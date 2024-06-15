@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.scss";
 import { HomeMessages, FaqMessages, ContactDB } from "../../constants/home.js";
-import { Button, InputPassword, Layout, Textfield } from "../../components";
+import { Button, InputPassword, Layout, Textfield, TextEditor } from "../../components";
 import HomeImage from "../../assets/images/Home-image.svg";
 import { useNavigate } from "react-router-dom";
 
@@ -44,6 +44,8 @@ const Home = () => {
                         //fazer pop up de cadastro gmail
                     }}
                     />
+                    <TextEditor />
+                    
                 </div>
                 <img src={HomeImage} alt='illustration' />
             </div>
