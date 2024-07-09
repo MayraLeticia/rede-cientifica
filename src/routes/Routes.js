@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { Home, Login, FreeFlow } from "../screens";
+import { Home, Login, FreeFlow, Continuação } from "../screens";
 
 
 const AppRoutes = () => {
@@ -10,6 +10,7 @@ const AppRoutes = () => {
                 <Route  path="/home" element={<Home />} />
                 <Route  path="/login" element={<Login />} />
                 <Route path="/freeflow/:id" element={<FreeFlow />} />
+                <Route path="/continuação/:id" element={<Continuação />} />
             </Routes>
         </Router>
     );

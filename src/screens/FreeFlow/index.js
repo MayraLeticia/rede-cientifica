@@ -27,8 +27,7 @@ const steps = [
         description: "Deve sintetizar de maneira clara o que vai fazer na dissertação, ou seja ter relação com o objetivo geral. Pode ser usado recurso de título e subtítulo. \nDeve conter as categorias que vai trabalhar no projeto.",
         icon: { Lamp },
         id: 3
-    },
-    
+    }
 ];
 
 
