@@ -5,7 +5,6 @@ import { Button, Textfield, Layout } from "../../components";
 
 
 const steps = [
-    
     { 
         title: "1. Introdução - parte 1",
         description: "Contextualize um fenômeno real que deve investigado, em até 3 parágrafos. Escreva do assunto mais abrangente ao mais simples.\nInclua leis, jurisprudências, conceitos e, se tiver, dados estatísticos.",
@@ -92,120 +91,110 @@ const steps = [
     { 
         title: "6. Metodologia - parte 1",
         description: "Aqui você deve classificar a Metodologia utilizada. Existem várias classificações:",
-        checkbox: [
-            {
-                title: "Classificação:",
-                subtitle: "Quanto ao tipo:",
-                options: [
-                    {
-                        name: "Bibliográfica",
-                        description: "Livros, artigos científicos com Qualis ou fator de impacto.",
-                    },
-                    {
-                        name: "Documental",
-                        description: "Jurisprudência, documentos, resoluções, relatórios, legislações.",
-                    },
-                    {
-                        name: "De campo",
-                        description: "Envolve coleta de novos dados de fontes primárias.",
-                    },
-                ]
-            }
-        ],
+        checkbox: {
+            title: "Classificação:",
+            subtitle: "Quanto ao tipo:",
+            options: [
+                {
+                    name: "Bibliográfica",
+                    description: "Livros, artigos científicos com Qualis ou fator de impacto.",
+                },
+                {
+                    name: "Documental",
+                    description: "Jurisprudência, documentos, resoluções, relatórios, legislações.",
+                },
+                {
+                    name: "De campo",
+                    description: "Envolve coleta de novos dados de fontes primárias.",
+                },
+            ]
+        },
         id: 8
     },
     { 
         title: "6. Metodologia - parte 2",
         description: "Aqui você deve classificar a Metodologia utilizada. Existem várias classificações:",
-        checkbox: [
-            {
-                title: "Classificação:",
-                subtitle: "Quanto à abordagem:",
-                options: [
-                    {
-                        name: "Qualitativa",
-                        description: "A pesquisa qualitativa tem um caráter mais subjetivo, trata de níveis de interpretação de determinado fenômeno.",
-                    },
-                    {
-                        name: "Quantitativa",
-                        description: "A pesquisa quantitativa utiliza uma abordagem estatistica, com números, cálculos matemáticos e métricas no estudo do fenômeno.",
-                    },
-                ]
-            }
-        ],
+        checkbox: {
+            title: "Classificação:",
+            subtitle: "Quanto à abordagem:",
+            options: [
+                {
+                    name: "Qualitativa",
+                    description: "A pesquisa qualitativa tem um caráter mais subjetivo, trata de níveis de interpretação de determinado fenômeno.",
+                },
+                {
+                    name: "Quantitativa",
+                    description: "A pesquisa quantitativa utiliza uma abordagem estatistica, com números, cálculos matemáticos e métricas no estudo do fenômeno.",
+                },
+            ]
+        },
         id: 9
     },
     { 
         title: "6. Metodologia - parte 3",
         description: "Aqui você deve classificar a Metodologia utilizada. Existem várias classificações:",
-        checkbox: [
-            {
-                title: "Classificação:",
-                subtitle: "Quanto ao objetivo:",
-                options: [
-                    {
-                        name: "Exploratório",
-                    },
-                    {
-                        name: "Explicativo",
-                    },
-                    {
-                        name: "Descritivo",
-                    },
-                    {
-                        name: "Analítico",
-                    },
-                ]
-            }
-        ],
+        checkbox: {
+            title: "Classificação:",
+            subtitle: "Quanto ao objetivo:",
+            options: [
+                {
+                    name: "Exploratório",
+                },
+                {
+                    name: "Explicativo",
+                },
+                {
+                    name: "Descritivo",
+                },
+                {
+                    name: "Analítico",
+                },
+            ]
+        },
         id: 10
     },
     { 
         title: "6. Metodologia - parte 4",
         description: "Aqui você deve classificar a Metodologia utilizada. Existem várias classificações:",
-        checkbox: [
-            {
-                title: "Classificação:",
-                subtitle: "Quanto à natureza da pesquisa:",
-                options: [
-                    {
-                        name: "Teórica",
-                    },
-                    {
-                        name: "Empírica",
-                    },
-                ]
-            }
-        ],
+        checkbox: {
+            title: "Classificação:",
+            subtitle: "Quanto à natureza da pesquisa:",
+            options: [
+                {
+                    name: "Teórica",
+                },
+                {
+                    name: "Empírica",
+                },
+            ]
+        },
         id: 11
     },
     { 
         title: "6. Metodologia - parte 5",
         description: "Aqui você deve classificar a Metodologia utilizada. Existem várias classificações:",
-        checkbox: [
-            {
-                title: "Qual foi a técnica de coleta de dados? ",
-                options: [
-                    {
-                        name: "Observação  de campo",
-                    },
-                    {
-                        name: "Entrevistas",
-                    },
-                    {
-                        name: "Questionário",
-                    },
-                    {
-                        name: "Outros:",
-                        input: [
-                            {
-                                placeholder: "Digite aqui..."
-                            },
-                        ],
-                    },
-                ]
-            }
-        ],
+        checkbox: {
+            title: "Qual foi a técnica de coleta de dados? ",
+            options: [
+                {
+                    name: "Observação de campo",
+                },
+                {
+                    name: "Entrevistas",
+                },
+                {
+                    name: "Questionário",
+                },
+                {
+                    name: "Outros:",
+                    input: [
+                        {
+                            placeholder: "Digite aqui..."
+                        },
+                    ],
+                },
+            ]
+        },
         id: 12
     },
     { 
@@ -230,7 +219,6 @@ const steps = [
         ],
         id: 14
     },
-
 ];
 
 
@@ -319,7 +307,10 @@ const Continuação = () => {
                                     name={option.name}
                                     onChange={handleInputChange}
                                 />
-                                <p>{option.name}</p>
+                                <div className="checkbox-option-label">
+                                    <p>{option.name}</p>
+                                    <span>{option.description}</span>
+                                </div>
                                 {option.input && option?.input?.map((input, inputIndex) => (
                                     <Textfield
                                         key={inputIndex}
