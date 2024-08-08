@@ -3,15 +3,15 @@ import "./style.scss";
 import { Button } from "../../components";
 
 
-const PDF = () => {
+const Profile = () => {
     return (
         <div>
-            <label>Pagina de pdf em construção</label>
+            <label>Pagina de perfil em construção</label>
             <Button 
                 variant="button-filled-green"
                 name="Avançar"
                 onClick={() => {
-                    navigate("/continuação/1");
+                    navigate("/freeflow/1");
                 }}
             />        
         </div>
@@ -19,4 +19,4 @@ const PDF = () => {
 }
 
 
-export default PDF;
+export default Profile;

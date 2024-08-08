@@ -29,7 +29,7 @@ const Home = () => {
                         variant="button-filled-green"
                         name="Teste grátis"
                         onClick={() => {
-                            navigate("/#");
+                            navigate("/freeflow/1");
                             //fazer pop up de cadastro gmail
                         }}
                         />

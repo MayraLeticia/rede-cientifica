@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import "./style.scss";
-import { Button, Textfield, Layout } from "../../components";
+import { Button, Textfield, Layout, CheckboxInput } from "../../components";
 
 
 const steps = [
@@ -242,6 +242,13 @@ const Continuação = () => {
         }));
     };
 
+    const handleCheckboxChange = (checkedOptions) => {
+        setFormData(prevState => ({
+            ...prevState,
+            checkboxOptions: checkedOptions
+        }));
+    };
+
     const handleNextClick = () => {
         const nextId = parseInt(id) + 1;
         if (nextId <= steps.length) {
@@ -256,11 +263,11 @@ const Continuação = () => {
     if (!currentStep) {
         return(
             <Layout>
-            <div className="continuação">
-                
-                <div className="handle-loading">Page not found!</div>
-                
-            </div>
+                <div className="continuação">
+                    
+                    <div className="handle-loading">Page not found!</div>
+                    
+                </div>
             </Layout>
         ) 
     }
@@ -279,9 +286,9 @@ const Continuação = () => {
                     </span>
                 }
 
-                {currentStep.input && 
+                {currentStep.input && (
                     <div className="input-container">
-                        {currentStep.input?.map((input, index) => {      
+                        {currentStep.input.map((input, index) => (      
                             <div key={index}>
                                 {input.title && <p>{input.title}</p>}
                                 <Textfield
@@ -291,39 +298,20 @@ const Continuação = () => {
                                     onChange={handleInputChange}
                                 />
                             </div>
-                        })}
+                        ))}
                     </div>
-                }
+                )}
 
-                {currentStep.checkbox && 
+                {currentStep.checkbox && (
                     <div className="checkbox-container">
                         <label>{currentStep.checkbox.title}</label>
                         {currentStep.checkbox.subtitle && <p>{currentStep.checkbox.subtitle}</p>}
-                        {currentStep.checkbox?.options?.map((option, index) => (
-                            <div className="checkbox-option" key={index}>
-                                <input
-                                    type="checkbox"
-                                    id={option.name}
-                                    name={option.name}
-                                    onChange={handleInputChange}
-                                />
-                                <div className="checkbox-option-label">
-                                    <p>{option.name}</p>
-                                    <span>{option.description}</span>
-                                </div>
-                                {option.input && option?.input?.map((input, inputIndex) => (
-                                    <Textfield
-                                        key={inputIndex}
-                                        type="text"
-                                        placeholder={input.placeholder}
-                                        name={`checkbox-${currentStep.id}-${index}-${inputIndex}`}
-                                        onChange={handleInputChange}
-                                    />
-                                ))}
-                            </div>
-                        ))}
+                        <CheckboxInput
+                            options={currentStep.checkbox.options}
+                            onChange={handleCheckboxChange}
+                        />
                     </div>
-                }
+                )}
 
                 <div className="btn-container">
                     <Button 
@@ -337,8 +325,7 @@ const Continuação = () => {
                         onClick={handleNextClick}
                     />
                 </div>      
-            </div>
-            
+            </div>    
         </Layout>
     );
 }

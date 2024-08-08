@@ -46,6 +46,8 @@ const FreeFlow = () => {
         const nextId = parseInt(id) + 1;
         if (nextId <= steps.length) {
             navigate(`/freeflow/${nextId}`);
+        } else {
+            navigate(`/PDF`);
         }
     };
 

@@ -3,10 +3,10 @@ import "./style.scss";
 import { Button } from "../../components";
 
 
-const PDF = () => {
+const Register = () => {
     return (
         <div>
-            <label>Pagina de pdf em construção</label>
+            <label>Pagina de registro em construção</label>
             <Button 
                 variant="button-filled-green"
                 name="Avançar"
@@ -19,4 +19,4 @@ const PDF = () => {
 }
 
 
-export default PDF;
+export default Register;

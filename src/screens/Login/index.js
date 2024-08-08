@@ -33,7 +33,7 @@ const Login = () => {
                     variant="login-button button-filled-red"
                     name="Entrar"
                     onClick={() => {
-                        navigate("/#");
+                        navigate("/perfil");
                     }}
                     />
                     <div className='divider'>ou</div>
