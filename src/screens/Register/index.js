@@ -8,7 +8,7 @@ const Register = () => {
     const navigate = useNavigate();
 
     return (
-        <div>
+        <div className="container">
             <label>Pagina de registro em construção</label>
             <Button 
                 variant="button-filled-green"

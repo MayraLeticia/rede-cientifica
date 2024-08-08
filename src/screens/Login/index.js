@@ -15,19 +15,21 @@ const Login = () => {
 
             <div className='login-container'>
                 <div className="left-size">
+                    
                     <div className='login-text'>
                         <label>{LoginMessages.title}</label>
                         <p>{LoginMessages.description}</p>
                     </div>
-                        <Input 
-                            icon = "fa-envelope fa-regular"
-                            type="text"
-                            placeholder="E-mail"
-                        /> 
-                        <InputPassword 
-                            icon = "fa-solid fa-unlock-keyhole"
-                            placeholder="Senha"        
-                        />
+
+                    <Input 
+                        icon = "fa-envelope fa-regular"
+                        type="text"
+                        placeholder="E-mail"
+                    /> 
+                    <InputPassword 
+                        icon = "fa-solid fa-unlock-keyhole"
+                        placeholder="Senha"        
+                    />
                    
                     <Button 
                     variant="login-button button-filled-red"

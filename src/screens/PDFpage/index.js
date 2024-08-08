@@ -8,9 +8,9 @@ const PDF = () => {
     const navigate = useNavigate();
 
     return (
-        <div>
+        <div  className="container">
             <label>Pagina de pdf em construção</label>
-            <TextEditor />
+            <TextEditor className="container-text"/>
             <Button 
                 variant="button-filled-green"
                 name="Avançar"

@@ -9,7 +9,7 @@ import { Document, Packer, Paragraph, TextRun } from 'docx';
 import "./style.scss";
 
 
-const TextEditor = ({ initialValue }) => {
+const TextEditor = ({ initialValue, className }) => {
 
     const [editorValue, setEditorValue] = useState(initialValue);
     const handleChange = (value) => {
@@ -45,7 +45,9 @@ const TextEditor = ({ initialValue }) => {
 
 
     return (
-        <ReactQuill value={editorValue} onChange={handleChange} />
+        <div className={className}>
+            <ReactQuill value={editorValue} onChange={handleChange} />
+        </div>
     );
 }
 

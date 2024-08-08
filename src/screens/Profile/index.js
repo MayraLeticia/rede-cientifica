@@ -8,7 +8,7 @@ const Profile = () => {
     const navigate = useNavigate();
 
     return (
-        <div>
+        <div  className="container">
             <label>Pagina de perfil em construção</label>
             <Button 
                 variant="button-filled-green"
