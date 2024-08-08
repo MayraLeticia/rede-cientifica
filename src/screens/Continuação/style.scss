@@ -39,7 +39,11 @@
         }
     }
 
-    .input-container{
+    .map-container{
+        width: 100%;
+    }
+    
+    .ansewer-container{
         width: 100%;
 
         margin-top: 2vh;
@@ -47,11 +51,13 @@
         display: flex;
         justify-content: flex-start;
         align-items: center;
+        flex-direction: column;
 
-        input {
-            width: 100%;
-            height: 8.4vh;
-        }
+        
+    }
+
+    .textfield {
+        height: 50px;
     }
 
     .checkbox-container{

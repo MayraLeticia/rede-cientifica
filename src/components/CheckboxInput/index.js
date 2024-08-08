@@ -31,25 +31,30 @@ const CheckboxInput = ({ options, onChange }) => {
   return (
     <div className="checkbox-input">
       {options.map((option, index) => (
-        <label key={index}>
-          <input
-            type="checkbox"
-            value={option.name}
-            checked={checkedOptions.includes(option.name)}
-            onChange={handleCheckboxChange}
-          />
-          {option.name}
+        <div key={index}>
+          <div className='option'>
+            <input
+              type="checkbox"
+              value={option.name}
+              checked={checkedOptions.includes(option.name)}
+              onChange={handleCheckboxChange}
+            />
+            <p>{option.name}</p>
+            {option.name === 'Outros:' && (
+                     
+                <input
+                  type="text"
+                  value={otherOption}
+                  onChange={handleOtherChange}
+                  placeholder="Digite aqui..."
+                />
+             
+            )}
+          </div>
           {option.description && <span>{option.description}</span>}
-        </label>
+        </div>
       ))}
-      {options.some(option => option.name === 'Outros') && (
-        <input
-          type="text"
-          value={otherOption}
-          onChange={handleOtherChange}
-          placeholder="Digite aqui..."
-        />
-      )}
+      
     </div>
   );
 };

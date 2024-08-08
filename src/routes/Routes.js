@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { Home, Login, FreeFlow, Continuação, Register, Profile } from "../screens";
+import { Home, Login, FreeFlow, Continuação, Register, Profile, PDF } from "../screens";
 
 
 const AppRoutes = () => {

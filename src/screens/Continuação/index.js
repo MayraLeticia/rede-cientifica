@@ -253,11 +253,13 @@ const Continuação = () => {
         const nextId = parseInt(id) + 1;
         if (nextId <= steps.length) {
             navigate(`/continuação/${nextId}`);
+        } else {
+            navigate(`/perfil`);
         }
     };
 
     const handleBackClick = () => {
-        navigate(`/project`);
+        navigate(`/PDF`);
     };
 
     if (!currentStep) {
@@ -287,9 +289,9 @@ const Continuação = () => {
                 }
 
                 {currentStep.input && (
-                    <div className="input-container">
+                    <div className="ansewer-container">
                         {currentStep.input.map((input, index) => (      
-                            <div key={index}>
+                            <div key={index} className="map-container">
                                 {input.title && <p>{input.title}</p>}
                                 <Textfield
                                     type="text"
@@ -297,34 +299,53 @@ const Continuação = () => {
                                     name={`input-${currentStep.id}-${index}`}
                                     onChange={handleInputChange}
                                 />
+                                {index === currentStep.input.length - 1 && (
+                                    <div className="btn-container">
+                                        <Button
+                                            variant="button-border-green"
+                                            name="Voltar mais tarde"
+                                            onClick={handleBackClick}
+                                        />
+                                        <Button
+                                            variant="button-filled-red"
+                                            name="Proximo"
+                                            onClick={handleNextClick}
+                                        />
+                                    </div>
+                                )}
                             </div>
                         ))}
                     </div>
                 )}
 
                 {currentStep.checkbox && (
-                    <div className="checkbox-container">
-                        <label>{currentStep.checkbox.title}</label>
-                        {currentStep.checkbox.subtitle && <p>{currentStep.checkbox.subtitle}</p>}
-                        <CheckboxInput
-                            options={currentStep.checkbox.options}
-                            onChange={handleCheckboxChange}
-                        />
+                    <div className="ansewer-container">
+                        <div className="checkbox-container">
+                            <label>{currentStep.checkbox.title}</label>
+                            {currentStep.checkbox.subtitle && <p>{currentStep.checkbox.subtitle}</p>}
+                            <CheckboxInput
+                                options={currentStep.checkbox.options}
+                                onChange={handleCheckboxChange}
+                            />
+                        </div>
+
+                        <div className="btn-container">
+                            <Button 
+                                variant="button-border-green"
+                                name="Voltar mais tarde"
+                                onClick={handleBackClick}
+                            />
+                            <Button 
+                                variant="button-filled-red"
+                                name="Proximo"
+                                onClick={handleNextClick}
+                            />
+                        </div>
                     </div>
+                    
                 )}
 
-                <div className="btn-container">
-                    <Button 
-                        variant="button-border-green"
-                        name="Voltar mais tarde"
-                        onClick={handleBackClick}
-                    />
-                    <Button 
-                        variant="button-filled-red"
-                        name="Proximo"
-                        onClick={handleNextClick}
-                    />
-                </div>      
+                      
             </div>    
         </Layout>
     );

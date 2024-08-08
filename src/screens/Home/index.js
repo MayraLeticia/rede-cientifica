@@ -44,7 +44,6 @@ const Home = () => {
                         //fazer pop up de cadastro gmail
                     }}
                     />
-                    <TextEditor />
                     
                 </div>
                 <img src={HomeImage} alt='illustration' />
